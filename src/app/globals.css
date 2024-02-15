@@ -1,0 +1,342 @@
+body{
+    background-color: #FCF7EE;
+}
+button.btn.btn-square.last-btn {
+    font-size: 20px;
+    width: 210px;
+    border: none;
+    border-radius: 30px;
+    background: #FFA9B0;
+}
+
+.border-cstm {
+    border-right: 1px solid;
+}
+img.logo_img {
+    object-fit: scale-down;
+    height: 60px;
+    width: 233px;
+}
+.card-col-main h5.card-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.seen-class h6{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.Illustration-img{
+    width: 140px;
+}
+.footer_section{
+    border-top: solid black;
+   
+}
+.nav-item{
+    text-decoration: none;
+    
+}
+.m-all h2 {
+    font-weight: 800;
+    font-size: 38px;
+}
+.nav-links{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    
+}
+
+.text_field{
+    margin-left: 50px;
+}
+
+.footer-row {
+    gap: 20px;
+    align-items: baseline;
+}
+h5.text_footer {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+img.footer-img {
+   margin-top: 15px ;   
+    width: 180px;
+    color: transparent;
+    object-fit: scale-down;
+}
+.haircut_btn{
+
+    align-items: end;
+}
+
+.main-hero-banner {
+    background-image: url("/Home-page-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner_video {
+    width: 500px;
+    height: 500px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+/* second css */
+
+  .banner-img{
+      padding: 30px;
+      width: 500px;
+  }
+  .First-heading{
+      font-weight: 700;
+      font-size: 50px;
+  }
+  .First-paragraph{
+      font-weight: 400;
+      font-size: 20px;
+  }
+  .btn-dark-cstm {
+    gap: 10px;
+    justify-content: center;
+    align-items: baseline;
+    display: flex;
+    width: 210px;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 30px;
+    background: #fff;
+  }
+  .btn-dark-cstm:hover {
+
+      border:1px solid white;
+      color: white;
+      border-radius: 30px;
+     
+  }
+  .btn-dark-involved{
+      border: 1px solid #000;
+     width: 200px;
+      font-weight: 500;
+      font-size: 20px;
+      border-radius: 30px;
+      background: #fff;
+  }
+  .btn-dark-involved:hover{
+      border: 1px solid white;
+     width: 200px;
+      font-weight: 500;
+      font-size: 20px;
+      border-radius: 30px;
+     background: #000000;
+     color: white;
+  }
+  .m-all {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 40px;
+}
+  .strong-img {
+      float: right;
+      height: 124px;
+      object-fit: fill;
+      width: 117px;
+      position: relative;
+  }
+  .right-img {
+      top: 24px;
+      position: relative;
+      display: block;
+  }
+  .top-right-img-section {
+      bottom: 70px;
+      position: relative;
+  }
+  .client-img {
+      height: 110px;
+      object-fit: scale-down;
+      width: 160px;
+  }
+  .card-main {
+    border-radius: 0px;
+    border: none;
+    background: transparent;
+}
+  .card-col-main .card-body {
+      padding: 20px 0px;
+  }
+  a.card-link{
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9px;
+      padding: 6px 20px;
+      background: #36CCCC;
+  }
+  a.card-link2{
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9px;
+      padding: 6px 20px;
+      background:#FAC824
+  }
+  a.card-link3{
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9px;
+      padding: 6px 20px;
+      background:#FAC824
+  }
+  a.card-link5{
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9px;
+      padding: 6px 20px;
+      background:#9454A3
+  }
+  .btn-dark-launch-app{
+      width: 300px;
+      font-weight: 500;
+      font-size: 20px;
+      border-radius: 30px;
+      background: #000;
+      color: #fff;
+  }
+  .icon-img {
+    width: 15px;
+    height: 15px;
+  }
+
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.slider-one {
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+.slide-one img {
+    object-fit: contain;
+    height: 64px;
+    width: 230px;
+}
+
+.slider-one .slide-track-one {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider-one .slide-one {
+    width: 100%;
+}
+
+
+
+  @keyframes scroll-two {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.slider-two {
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+.slide-two img {
+    object-fit: contain;
+    height: 64px;
+    width: 230px;
+}
+
+.slider-two .slide-track-two {
+    animation: scroll-two 40s linear infinite;
+    animation-direction: reverse;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider-two .slide-two {
+    width: 100%;
+}
+      p.card-text {
+        margin: 10px auto;
+        height: 80px;
+    }
+      
+    .cstm-nav ul.navbar-nav {
+        gap: 30px;
+        align-items: center;
+        padding: 20px;
+    }
+  .haircut_btn{
+    width: 150px;
+    height:fit-content;
+    margin-top: 50px;
+    border-radius: 15px;
+  }
+  .white-icon-img {
+    margin-left: 9px;
+    width: 30px;
+}
+
+.btn-dark-launch-app:hover {
+background: #000 ;
+color: #fff;
+}
+  @media only screen and (max-width: 600px) {
+    .banner-img {
+        margin-top: 50px;
+        padding: 0px;
+    }
+    .main-hero-banner {
+        padding: 40px 20px  !important;
+    }
+    .client-img {
+        width: 100%;
+    }
+       .footer1{
+     justify-content: center;
+     display: flex;
+       }
+       .footer_section{
+        justify-content: center;
+        display: flex;
+       }
+
+    .text_footer{
+    justify-content: center;
+    display: flex;
+    }
+    .Icons_Section{
+    justify-content: center;
+    display: flex;
+    }
+    #banner_video {
+        height: 400px;
+
+    }
+   
+    .last-section, .we-think-section, .our-reserach{
+        padding: 10px !important;
+    }
+    .border-cstm {
+        border-bottom: 1px solid;
+        border-right: none;
+    }
+    .man-section{
+        padding: 10px;
+        }
+    }
