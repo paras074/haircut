@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'GT America Trial Bd';
+    src: url('GTAmericaTrial-Bd.eot');
+    src: url('GTAmericaTrial-Bd.eot?#iefix') format('embedded-opentype'),
+        url('GTAmericaTrial-Bd.woff2') format('woff2'),
+        url('GTAmericaTrial-Bd.woff') format('woff'),
+        url('GTAmericaTrial-Bd.ttf') format('truetype'),
+        url('GTAmericaTrial-Bd.svg#GTAmericaTrial-Bd') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

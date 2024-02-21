@@ -1,0 +1,94 @@
+/* 
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navbarBrand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImg {
+    margin-right: 10px;
+  }
+  
+  .navbarToggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .collapse {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  .navbarNav {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navItem {
+    margin-right: 15px;
+  }
+  
+  .navLinks {
+    text-decoration: none;
+    color: #fff;
+  }
+   
+
+
+
+ */
+
+
+
+
+
+
+
+
+   .Nav_btn {
+    background-color: #dcdcdf;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .btnSquare {
+    border-radius: 0;
+  }
+  
+  .lastBtn {
+    margin-left: 15px;
+  }
+   
+  .imgFluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1px;
+  }
+  
