@@ -16,10 +16,19 @@
     width: 140px;
 }
 .m_all h2 {
-    font-weight: 800;
-    font-size: 38px;
+    font-family: 'Editor Condensed';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    margin: 12px auto;
 }
-
+.First_heading_top{
+font-family: 'Editor Condensed';
+font-weight: 700;
+font-size: 57px;
+line-height: 77px;
+margin: 0px;
+}
 .main_hero_banner {
     background-image: url("/Home-page-banner.png");
     background-size: cover;
@@ -33,9 +42,11 @@
 }
  
 .First_heading {
-	font-weight: 700;
-	font-size: 55px;
-	margin: 0px;
+    font-family: 'Editor Condensed';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 53px;
+    margin: 0px;
 }
   .First_paragraph {
 	font-weight: 400;
@@ -328,7 +339,7 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	border-top: 1px solid;
-	gap: 5px;
+	gap: 20px;
 	border-bottom: 1px solid;
     margin: 30px auto;
 }
@@ -376,7 +387,38 @@
   .last_sub{
     margin: 30px auto;
   }
+  .row_container_card {
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: 1px solid;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+  @media screen and (max-width: 1024px) {
+    .row_container_img_text{
+        border-bottom: none;
+        border-top: none;
+        gap:106px;
+        margin: 50px auto;
+    }
+    .box_container_img_text{
+        border-bottom: 1px solid;
+        border-right: none;
+    }
+    
+  }
 @media screen and (max-width: 900px) {
+    .row_container_card {
+        padding: 0px;
+        margin: 20px;
+        flex-direction: column;
+    }
+    .main_hero_banner{
+        border-radius: 0px;
+    }
     .card_main_1{
         margin: 35px auto;
     }
@@ -384,7 +426,10 @@
         height: 350px;
 
     }
-    
+    .row_container_img_text{
+        margin: 30px 20px;
+        border-top: none;
+    }
     .row_container_hero {
         padding: 30px;
         flex-direction: column;
@@ -395,6 +440,8 @@
         flex-direction: column;
     }
     .row_container_text {
+        padding: 20px;
+        margin: 20px;
         flex-direction: column;
     }
     .box_container_text {

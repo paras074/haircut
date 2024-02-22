@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Editor Condensed';
+    src: url('./fonts/EditorCondensed-Bold.woff2') format('woff2'),
+        url('./fonts/EditorCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 body{
+    margin: 30px;
     background-color: #FCF7EE;
 }
 button.btn.btn-square.last-btn {
@@ -100,8 +110,11 @@ img.logo_img {
         text-align: center; 
     }
    
-   
-    
+    @media screen and (max-width: 1024px) {
+        body {
+            margin: 40px;
+        }
+    }
     @media (max-width: 768px) {
         .haircut_img {
             flex-direction: column; 
@@ -218,10 +231,8 @@ nav {
     padding: 0;
 }
 .logo-img{
-    width: 160px;
-    color: transparent;
-    height: 41px;
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
 }
 nav .logo { 
     float: left;
@@ -246,9 +257,9 @@ nav .links li {
 }
 nav .links a {
     display: block;
-    padding: 1em;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 15px;
+    font-size: 21px;
+    font-weight: 500;
     color: #050505;
     text-decoration: none;
     position: relative;
@@ -261,7 +272,7 @@ nav .links a {
 nav .icon-burger {
     display: none;
     position: absolute;
-    right: 0%;
+    right: 4%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -281,10 +292,10 @@ nav .icon-burger .line {
 
 @media screen and (max-width: 768px) {
     .Nav_btn{
-        margin: 20px auto;
-        font-size: 20px !important;
+        font-size: 26px !important;
     }
 nav .logo {
+    margin-left: 12px;
     float: none;
     align-items: center;
     justify-content: flex-start;
@@ -306,7 +317,7 @@ nav .logo {
         transition: all .5s ease-in-out;
     }
     nav .links a {
-        font-size: 20px;
+        font-size: 26px;
     }
     nav :checked ~ .links {
         bottom: 0;
@@ -329,9 +340,9 @@ nav .logo {
     background-color: #FFA9B0;
     color: #000000;
     border: none;
-    font-size: 16px;
+    font-size: 21px;
     padding: 10px 20px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: '__Roboto_Condensed_01d775';
     cursor: pointer;
     display: flex;
@@ -436,7 +447,11 @@ width:24px;
 
 }
 
-
+@media screen and (max-width: 900px) {
+    body {
+        margin: 0px;
+    }
+}
 
     @media (max-width: 767px) {
         .Contact_section,
@@ -472,7 +487,7 @@ width:24px;
             padding-top: 20px; 
         }
     
-        .m-all h2 {
+        .m-all h2 { 
             font-size: 28px; 
 
         }
@@ -496,7 +511,7 @@ width:24px;
             order: 4;
         }
         .Icons_Section.col-md-3 {
-            order: 3;
+            order: 3;   
         }
         
 

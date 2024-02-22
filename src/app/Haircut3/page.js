@@ -68,10 +68,6 @@ export default function Haircut() {
           </div>
           </div>
         </div>
-        
-
-
-        
         {/* hyperlinks section ends */}
       </div>
     </>

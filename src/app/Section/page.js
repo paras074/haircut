@@ -6,7 +6,7 @@ export default function Section() {
 <div className="container">
 <div className={`${styles.row_container_hero} ${styles.main_hero_banner}`}>
   <div className={styles.box_container_hero}>
-  <h1 className={styles.First_heading}>We need your help fixing hair loss for good</h1>
+  <h1 className={styles.First_heading_top}>We need your help fixing hair loss for good</h1>
       <p className={styles.First_paragraph}>HairDAO is an open-source R&D network where patients and researchers collaborate to develop revolutionary new treatments for hair loss. Log your treatment experiences in our app, contribute to cutting-edge hair loss research, and earn HAIR token as a reward.</p>
       <div className={styles.d_flex}>
         <a href="#" className={`${styles.btn} ${styles.btn_dark_cstm}`}>LAUNCH THE APP
@@ -23,8 +23,6 @@ export default function Section() {
     </div>
   </div>
 </div>
-
-
 {/* Hero Section End */}
 
 {/* Second Section */}
@@ -115,6 +113,7 @@ export default function Section() {
 {/* fifth Section End */}
 
 {/* sixth Section*/}
+<div className={styles.row_container_card}>
 <div className={styles.card_container}>
   <div className={styles.card_main_1}>
     <a className={styles.a_sec }href="#">
@@ -191,6 +190,7 @@ export default function Section() {
      </div>
     </a>
   </div>
+</div>
 </div>
 
 {/* sixth Section End*/}
@@ -276,9 +276,7 @@ export default function Section() {
     </div>
   </div>
   </div>
-
-
-    </div>
+</div>
   
 
 
@@ -304,8 +302,6 @@ export default function Section() {
 
 {/* eight Section */}
     </main>
-   
-   
   );
 }
 
