@@ -1,6 +1,30 @@
 import Image from "next/image";
 import styles from "../Styles/section.module.css"
+import Link from "next/link";
 export default function Section() {
+
+ 
+    var cardData = [
+      { "img": 'card_1.png', "title": 'TRH', "discription": 'Thyrotropin Releasing Hormone consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.', "FUNDED": 'FUNDED', "link":'/study5' },
+      { "img": 'card2.png', "title": 'T3', "discription": 'Levothyroxine consectetur adipiscing elit. Pellentesque eu orci placerat. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.', "FUNDED": 'PCT SUBMITTED' , "link":'/Study4'  },
+      { "img": 'card3.png', "title": 'T4', "discription": 'Levothyroxine consectetur adipiscing elit. Pellentesque eu orci placerat. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.', "FUNDED": 'PCT SUBMITTED' , "link":'/Study4'  },
+      { "img": 'card4.png', "title": 'Dutasteride', "discription": 'Delivery Vehicle Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus', "FUNDED": 'FUNDED' , "link":'/Study3'  },
+      { "img": 'card5.png', "title": 'Twist-1 and 2i', "discription": 'Twist Inhibitor Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus. Consectetur adipiscing elit.', "FUNDED": 'FINALIZING' , "link":'/Study2' },
+      { "img": 'card6.png', "title": 'YAP-1i', "discription": 'YAP Inhibitor Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.', "FUNDED": 'FUNDED' , "link":'/Study1'  },
+    ];
+
+
+
+
+    const data = [
+      { title: '8 in 10 men', text: 'and half of all women will experience hair loss in their lifetimes.', img: 'Illustration.png' },
+      { title: '66% of men', text: 'will experience noticeable hair loss before the age of 35.', img: 'Vector-grph.png' },
+      { title: '0 new treatments', text: 'have been brought to market since Finasteride in 1997.', img: 'New-T.png' },
+      { title: '0.004%', text: "of all early stage R&D funding goes to hair loss research. That's only $5.4 million a year!", img: 'last-section.png' },
+    ];
+
+
+
   return (
     <main>
 <div className="container">
@@ -27,35 +51,30 @@ export default function Section() {
 
 {/* Second Section */}
 
+
 <div className={styles.row_container_img_text}>
-  <div className={styles.box_container_img_text}>
-    <div className={styles.m_all}>
-    <h2>8 in 10 men</h2>
-    <p>and half of all women will experience hair loss in their lifetimes. </p>
-    <img src="Illustration.png" className={styles.Illustration_img} alt="Illustration" />
-   </div>
-   </div>
-  <div className={styles.box_container_img_text}>
-  <div className={styles.m_all}>
-   <img src="Vector-grph.png" className={styles.Illustration_img} alt="Illustration" />
-    <h2>66% of men</h2>
-    <p>will experience noticeable hair loss before the age of 35.</p>
-   </div>
-  </div>
-  <div className={styles.box_container_img_text}> <div className={styles.m_all}>
-    <h2>0 new treatments</h2>
-    <p>have been brought to market since Finasteride in 1997.</p>
-    <img src="New-T.png" className={styles.Illustration_img} alt="Illustration" />
-   </div>
-   </div>
-  <div className={`${styles.box_container_img_text} ${styles.last_child}`}>
+      {data.map((item, index) => (
+        <div key={index} className={`${styles.box_container_img_text} ${index % 2 === 0 ? styles.imageTop : ''}`}>
+          <div className={styles.m_all}>
+            {index % 2 === 0 && <img src={item.img} className={styles.Illustration_img} alt="Illustration" />}
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+            {index % 2 === 1 && <img src={item.img} className={styles.Illustration_img} alt="Illustration" />}
+          </div>
+        </div>
+      ))}
+    </div>
+
+ 
+ 
+  {/* <div className={`${styles.box_container_img_text} ${styles.last_child}`}>
   <div className={styles.m_all}>
    <img src="last-section.png" className={styles.Illustration_img} alt="Illustration" />
     <h2>0.004%</h2>
     <p>of all early stage R&D funding goes to hair loss research. That's only $5.4 million a year!</p>
    </div>
-  </div>
-</div>
+  </div> */}
+
 
 {/* Second Section End */}
 
@@ -113,85 +132,31 @@ export default function Section() {
 {/* fifth Section End */}
 
 {/* sixth Section*/}
-<div className={styles.row_container_card}>
-<div className={styles.card_container}>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card_1.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>TRH</h2>
-        <p>Thyrotropin Releasing Hormone consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.</p>
-        <p className={styles.card_link}>FUNDED</p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card2.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>T3</h2>
-        <p>Liothyronine consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.
-        </p>
-        <p className={styles.card_link2}>PCT SUBMITTED</p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card3.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>T4</h2>
-        <p>Levothyroxine consectetur adipiscing elit. Pellentesque eu orci placerat. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.
-        </p>
-        <p className={styles.card_link2}>PCT SUBMITTED</p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card4.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Dutasteride</h2>
-        <p>Delivery Vehicle Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus</p>
-        <p className={styles.card_link}>FUNDED</p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec} href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card5.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Twist-1 and 2i</h2>
-        <p>Twist Inhibitor Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus. Consectetur adipiscing elit.
-        </p>
-        <p className={styles.card_link3}>FINALIZING</p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="card6.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>YAP-1i</h2>
-        <p>YAP Inhibitor Study consectetur adipiscing elit. Pellentesque eu orci placerat, placerat erat id, iaculis tellus.</p>
-        <p className={styles.card_link}>FUNDED</p>
-     </div>
-    </a>
-  </div>
-</div>
-</div>
+
+    <div className={styles.row_container_card}>
+    <div className={styles.card_container}>
+      {cardData.map((cardData, index) => (
+        <div key={index} className={styles.card_main_1}>
+          <a className={styles.a_sec} href="#"> 
+            <div className={styles.card_main_1_image}>
+              <Link href={cardData.link}>
+              <img src={cardData.img} alt="card_main_1" />
+              </Link>
+            </div>
+            <div className={styles.description}>
+              <h2>{cardData.title}</h2>
+              <p>{cardData.discription}</p>
+              <p className={`${styles.card_link} ${cardData.FUNDED === 'FINALIZING' ? styles.card_link3 : ''} ${cardData.FUNDED === 'PCT SUBMITTED' ? styles.card_link2 : ''}`}>
+  {cardData.FUNDED}
+</p>
+
+          
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+    </div>
 
 {/* sixth Section End*/}
 

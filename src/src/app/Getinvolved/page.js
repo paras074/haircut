@@ -2,6 +2,22 @@ import Image from "next/image";
 import Header from "../Header/page";
 import styles from "../Styles/Getinvoled.module.css"
 export default function HairToken() {
+
+  var cardData = [
+    { "img": 'Videow_1.png', "title": 'HP Leaderboard', "discription": 'Contributors earn HP in exchange for work or data. Our leaderboard is updated in real-time on the HairDAO App.', "FUNDED": 'LAUNCH THE APP',"imgarrow" :'/rightvector.png'},
+    { "img": 'Videow_2.png', "title": 'Daily Summaries', "discription": 'Stay up to date in with ongoing DAO activities and research updates in the Summaries channel of our Discord server.', "FUNDED": 'STAY UP TO DATE' , "imgarrow" :'/rightvector.png' },
+    { "img": 'Videow_3.png', "title": 'Hair Cuts', "discription": 'Impactful research, pertinent discussions, and HAIR token distributions are documented quarterly in Hair Cuts.', "FUNDED": 'READ ALL EDITIONS' ,"imgarrow" :'rightvector.png' },
+    
+  ];
+  var Daodata = [
+    {"heading": 'Operational Efficiency' , "para": 'Traditional companies pay hundreds of thousands of dollars to incorporate their global corporation and incentivize their workforce with their native equity. A DAO can incorporate globally and issue its native token to its workforce at almost zero cost. Public blockchain technology enables us to scale and incentivize the HairForce much faster than the legacy system allows.'},
+
+    {"heading": 'Realtime Transparency' , "para": 'Investors in a traditional company need to wait until a poorly-incentivized quarterly report is released, or hire a costly auditor, to verify both heir shares and the assets held by the company. Our members are able to verify their HAIR holdings and the DAO’s trail of funds in real-time and at zero cost. The entire hair loss community can always verify that the DAO is acting in their best interest.'},
+    {"heading": 'Community Ownership' , "para": 'Traditional pharmaceutical companies are owned by outsiders, whose goal is to charge suffering patients as much as the healthcare system allows. Complete community ownership via the HAIR token ensures that hair loss patients directly determine which solutions are funded and how the DAO governs those assets, including the prices we charge our customers.'},
+    
+    
+  ]
+
   return (
     <div className="container">
     <div className={`${styles.row_container_hero} ${styles.main_hero_banner}`}>
@@ -25,50 +41,23 @@ export default function HairToken() {
   <h1 className={styles.Main_heading}>Track our progress</h1>
   </div>
 
-<div className={styles.row_container_card}>
+  <div className={styles.row_container_card}>
 <div className={styles.card_container}>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec } href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Videow_1.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>HP Leaderboard</h2>
-        <p>Contributors earn HP in exchange for work or data. Our leaderboard is updated in real-time on the HairDAO App.</p>
-        <p className={styles.card_link}>Launch the app
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Videow_2.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Daily Summaries</h2>
-        <p>Stay up to date in with ongoing DAO activities and research updates in the Summaries channel of our Discord server.</p>
-        <p className={styles.card_link}>STAY UP TO DATE
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Videow_3.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Hair Cuts</h2>
-        <p>Impactful research, pertinent discussions, and HAIR token distributions are documented quarterly in Hair Cuts.</p>
-        <p className={styles.card_link}>READ ALL EDITIONS
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
+{cardData.map((cardData, index) => (
+        <div key={index} className={styles.card_main_1}>
+          <a className={styles.a_sec} href="#">
+            <div className={styles.card_main_1_image}>
+              <img src={cardData.img} alt="card_main_1" />
+            </div>
+            <div className={styles.description}>
+              <h2>{cardData.title}</h2>
+              <p>{cardData.discription}</p>
+              <p className={styles.card_link2}>{cardData.FUNDED}
+              <img src={cardData.imgarrow} className={styles.icon_img_better} alt="true" /></p>
+            </div>
+          </a>
+        </div>
+      ))}
 </div>
 </div>
 
@@ -89,27 +78,20 @@ export default function HairToken() {
    </div>
   <div className={styles.box_container_after_img_text}>
   <div className={styles.table_str_all}>
-      <div className={styles.ert}>
-    <h2 className={styles.op_heading}>Operational Efficiency</h2>
-    <p>Traditional companies pay hundreds of thousands of dollars to incorporate their global corporation and incentivize their workforce with their native equity. A DAO can incorporate globally and issue its native token to its workforce at almost zero cost. Public blockchain technology enables us to scale and incentivize the HairForce much faster than the legacy system allows.</p>
-    </div>
-    <div className={styles.ert}>
-    <h2 className={styles.op_heading}>Realtime Transparency</h2>
-    <p>Investors in a traditional company need to wait until a poorly-incentivized quarterly report is released, or hire a costly auditor, to verify both heir shares and the assets held by the company. Our members are able to verify their HAIR holdings and the DAO’s trail of funds in real-time and at zero cost. The entire hair loss community can always verify that the DAO is acting in their best interest.</p>
-    </div>
-    <div className={styles.ert}>
-    <h2 className={styles.op_heading}>Community Ownership</h2>
-    <p>Traditional pharmaceutical companies are owned by outsiders, whose goal is to charge suffering patients as much as the healthcare system allows. Complete community ownership via the HAIR token ensures that hair loss patients directly determine which solutions are funded and how the DAO governs those assets, including the prices we charge our customers.</p>
-    </div>
- 
-   </div>
+  {Daodata.map((Daodata, index) => (
+        <div key={index}  className={styles.ert}>
+          <h2 className={styles.op_heading}>{Daodata.heading}</h2>
+          <p>{Daodata.para}</p>
+         </div>
+      ))}
+ </div>
   </div>
 </div>
 
 
 
 <div className={styles.row_container_btn}>
-  <div className={styles.box_container_better}>
+  <div className={`${styles.box_container_better} ${styles.First_child}`}>
   <h1 className={styles.First_heading}>Got skills?</h1>
       <p className={styles.First_paragraph}>Our uniquely talented and diverse community of contributors sets us apart. The HairDAO community includes researchers, doctors, engineers, content creators, designers, marketers, funders and more - all of whom contribute their expertise to help us solve hair loss. Contributors are categorised by 5 working groups, each dedicated to an essential function in the DAO:</p>
       
@@ -125,14 +107,14 @@ export default function HairToken() {
       </div>
       <p className={styles.First_paragraph}>To join a working group and become a HairDAO contributor, head over to our Discord, introduce yourself and tell us how your skills can help us advance hair loss research.</p>
       <div className={`${styles.d_flex} ${styles.gap_2}`}>
-        <a href="#" className={`${styles.btn} ${styles.btn_dark_better}`}>
+        <a href="https://discord.com/invite/sNAm9QbfAz" className={`${styles.btn} ${styles.btn_dark_better}`}>
         <img src="/discord.png" className={styles.icon_img_discord} alt="true" />
         JOIN A WORKING GROUP
         </a>
       </div>
   </div>
 
-  <div className={styles.box_container_better}>
+  <div className={`${styles.box_container_better} ${styles.Second_child}`}>
     <div className={styles.img_section}>
     <img src="image_67.png" className={styles.img_fluid_think} alt="left_side_img" /> 
     </div>
@@ -152,12 +134,12 @@ export default function HairToken() {
   <h1 className={styles.First_heading}>Tell us about your research</h1>
       <p className={styles.First_paragraph}>A commitment to good science underpins everything we do. If you are a PI, researcher, doctor, or technician working on a groundbreaking project that could use our support, please get in touch with the community on Discord, or send us an email to say hi. We’d love to hear from you.</p>
       <div className={styles.c_flex}>
-        <a href="#" className={`${styles.btn} ${styles.btn_dark_better}`}>
+        <a href="https://discord.com/invite/sNAm9QbfAz" className={`${styles.btn} ${styles.btn_dark_better}`}>
         <img src="/discord.png" className={styles.icon_img_discord} alt="true" />
           CHAT ON DISCORD
         </a>
-        <a href="#" className={`${styles.btn} ${styles.btn_dark_email}`}>
-        SEND US AN EMAIL
+        <a href="mailto:privacy@hairdao.xyz" className={`${styles.btn} ${styles.btn_dark_email}`}>
+          SEND US AN EMAIL
         </a>
       </div>
   </div>
@@ -180,9 +162,6 @@ export default function HairToken() {
   </div>
   </div>
   </div>
-
-
-
   <div className={`${styles.row_container_after_img_text} ${styles.mat_bt}`}>
   <div className={styles.box_container_after_img_text}>
     <div className={styles.after_contain}>

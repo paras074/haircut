@@ -635,6 +635,15 @@ font-size: 24px;
     margin: 30px auto;
   }
 @media screen and (max-width: 900px) {
+    .mat_bt{
+        display: none;
+    }
+    .Second_child{
+        order: 1;
+    }
+    .First_child{
+        order: 2;
+    }
     .card_main_1{
         margin: 35px auto;
     }
@@ -668,7 +677,7 @@ font-size: 24px;
     }
     .row_container_better {
         gap: 0;
-        padding: 30px;
+        margin: 16px;
         flex-direction: column;
     }
     .row_container_btn {
@@ -691,7 +700,7 @@ font-size: 24px;
         border-radius: 0px;
     }
     .mat_bt{
-        padding: 50px 0px;
+        padding: 0px 0px;
     }
 }
 @media (max-width: 768px) {
@@ -713,11 +722,10 @@ font-size: 24px;
             margin: 24px auto; 
         }
         .row_container_better{
-            padding-bottom: 40px;
             border-bottom: 1px solid;
         }
         .row_container_btn{
-            padding: 0px;
+            padding: 30px 0px;
             margin: 20px;
             border-bottom: 1px solid;
         }

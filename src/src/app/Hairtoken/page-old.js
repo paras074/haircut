@@ -3,6 +3,14 @@ import Header from "../Header/page";
 import styles from "../Styles/Hairtoken.module.css"
 
 
+var cardData = [
+  { "img": 'Video_1.png', "title": 'Launch the HairDAO app', "discription": 'The HairDAO app is where members upload treatment data and access the findings that others have shared in exchange for HAIR. Our members come from all countries and backgrounds.', "FUNDED": 'SIGN UP',"imgarrow" :'rightvector.png' },
+  { "img": 'Video_2.png', "title": 'Upload your treatment data', "discription": 'Share your treatment progress privately or publicly, get feedback from our community, explore promising treatments and pertinent discussions, and gain access to proprietary hair loss research data from our researchers', "FUNDED": 'UPLOAD DATA',"imgarrow" :'rightvector.png' },
+  { "img": 'Video_3.png', "title": 'Earn HAIR as reward', "discription": 'Participation in the HairDAO App accumulates HP. Every quarter, HP is converted into HAIR, and earnings are announced in Hair Cuts. You can claim your HAIR in the HairDAO app, and use your HAIR to govern the DAO.', "FUNDED": 'EARN HAIR',"imgarrow" :'rightvector.png' },
+  
+];
+
+
 export default function HairToken() {
   return (
     <div className="container">
@@ -30,48 +38,21 @@ export default function HairToken() {
   
 <div className={styles.row_container_card}>
 <div className={styles.card_container}>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec } href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Video_1.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Launch the HairDAO app</h2>
-        <p>The HairDAO app is where members upload treatment data and access the findings that others have shared in exchange for HAIR. Our members come from all countries and backgrounds.</p>
-        <p className={styles.card_link}>SIGN UP
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Video_2.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Upload your treatment data</h2>
-        <p>Share your treatment progress privately or publicly, get feedback from our community, explore promising treatments and pertinent discussions, and gain access to proprietary hair loss research data from our researchers.</p>
-        <p className={styles.card_link}>UPLOAD DATA
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
-  <div className={styles.card_main_1}>
-    <a className={styles.a_sec }href="#">
-      <div className={styles.card_main_1_image}>
-        <img src="Video_3.png" alt="card_main_1" />
-      </div>
-      <div className={styles.description}>
-        <h2>Earn HAIR as reward</h2>
-        <p>Participation in the HairDAO App accumulates HP. Every quarter, HP is converted into HAIR, and earnings are announced in Hair Cuts. You can claim your HAIR in the HairDAO app, and use your HAIR to govern the DAO.</p>
-        <p className={styles.card_link}>EARN HAIR
-        <img src="/right-vector.png" className={styles.icon_img_better} alt="true" />
-        </p>
-      </div>
-    </a>
-  </div>
+{cardData.map((cardData, index) => (
+        <div key={index} className={styles.card_main_1}>
+          <a className={styles.a_sec} href="#">
+            <div className={styles.card_main_1_image}>
+              <img src={cardData.img} alt="card_main_1" />
+            </div>
+            <div className={styles.description}>
+              <h2>{cardData.title}</h2>
+              <p>{cardData.discription}</p>
+              <p className={styles.card_link2}>{cardData.FUNDED}
+              <img src={cardData.imgarrow} className={styles.icon_img_better} alt="true" /></p>
+            </div>
+          </a>
+        </div>
+      ))}
 </div>
 </div>
 
@@ -357,3 +338,23 @@ export default function HairToken() {
   </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+{useyourHair.map((useyourHair, index) => (
+  <div key={index} className={styles.m_all}>
+   <img src={useyourHair.imghair} className={styles.Illustration_img} alt="card_main_1" />
+        <h2>{useyourHair.titleHair}</h2>
+        <p>{useyourHair.discriptionHair}</p>
+        <p className={styles.card_link2}>{useyourHair.FUNDEDHAIR}
+  <img src="/rightvector.png" className={styles.icon_img_better} alt="true" />
+  </p>
+  </div>
+))}
